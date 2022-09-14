@@ -2,8 +2,9 @@
 
 /**
  * main - print to the screen
+ * Return: returns zero
  */
-void main(void)
+int main(void)
 {
 	int result, b;
 
@@ -15,4 +16,5 @@ void main(void)
 		}
 	}
 	printf("%d\n", result);
+	return (0);
 }
