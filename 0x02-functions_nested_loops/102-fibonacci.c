@@ -9,7 +9,7 @@ int main(void)
 {
 	int a = 1;
 	int b = 2;
-	int c, d, e;
+	int c, d;
 
 	printf("%d, %d, ", a, b);
 	for (c = 2; c < 50; c++)
