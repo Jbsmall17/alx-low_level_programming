@@ -5,7 +5,7 @@
  */
 void print_times_table(int n)
 {
-	if (n >= 0 && n <=15)
+	if (n >= 0 && n <= 15)
 	{
 		for (int i = 0; i <= n; i++)
 		{
@@ -13,13 +13,13 @@ void print_times_table(int n)
 			{
 				int m = i * j;
 
-				_purchar(m);
-				_putchar(",");
-				_putchar(" ");
+				_putchar(m);
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 	}
 	else
-		_purchar("");
-	_purchar("\n");
+		_putchar(' ');
+	_putchar('\n');
 }	
