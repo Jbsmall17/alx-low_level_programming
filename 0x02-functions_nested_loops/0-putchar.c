@@ -1,11 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - print to the screen
- * Return: return Zero
+ * main - debugging example
+ * Return: 0
  */
-
 int main(void)
 {
-	printf("_putchar\n");
+	char *holberton = "_putchar";
+
+	while (*holberton)
+	{
+		_putchar(*holberton);
+		holberton++;
+	}
+	_putchar('\n');
 	return (0);
 }

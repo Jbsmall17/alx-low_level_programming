@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _isalpha - checks for alphabet
  * @c: parameter
@@ -14,16 +14,3 @@ int _isalpha(int c)
 		return  (0);
 }
 
-/**
- * main - print to the screen
- * Return: return either one or two
- */
-int main(void)
-{
-	int result = _isalpha('A');
-	int result1 = _isalpha('a');
-	int result2 = _isalpha(4);
-
-	printf("%d%d%d\n", result, result1, result2);
-	return (0);
-}

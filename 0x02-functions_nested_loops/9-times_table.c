@@ -1,32 +1,27 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * times_table - print from zero to nine timestable
  */
 void times_table(void)
 {
-	for (int a = 0; a < 10; a++)
+	int n;
+	int i;
+
+	for (n = 0; n <= 9; n++)
 	{
-		for (int b = 0; b < 10; b++)
+		_putchar('0');
+		for (i = 1; i <= 9; i++)
 		{
-			int m = a * b;
-			if (b != 9)
-			{
-				if (m < 10)
-					printf("%d,  ", m);
-				else
-					printf("%d, ", m);
-			}
-			else
-				printf("%d", m);	
+			int result = n * i;
+
+			_putchar(',');
+			_putchar(' ');
+			(result <= 9) ?
+			_putchar(' ') :
+			_putchar('0' + (result / 10));
+			_putchar('0' + (result % 10));
 		}
-		printf("$\n");
+	_putchar('\n');
 	}
 }
 
-/**
- * main - prinr to the screen
- */
-void main(void)
-{
-	times_table();
-}

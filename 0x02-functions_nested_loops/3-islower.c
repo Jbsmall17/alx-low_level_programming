@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _islower - check if the parameter is a lower case letter
  * @c: paramenter
@@ -10,16 +10,4 @@ int _islower(int c)
 		return (1);
 	else
 		return (0);
-}
-
-/**
- * main - print to the screen
- * Return: returns zero
- */
-int main(void)
-{
-	int result = _islower('c');
-
-	printf("%d\n", result);
-	return (0);
 }

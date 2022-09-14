@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_alphabet - print alphabet to the screen
  * Return: returns no value;
@@ -9,18 +9,7 @@ void print_alphabet(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
+		_putchar(ch);
 	}
-	putchar('\n');
-}
-
-/**
- * main - print to the screen
- * Return: return zero
- */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }
