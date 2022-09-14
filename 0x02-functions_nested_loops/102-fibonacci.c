@@ -2,10 +2,10 @@
 
 /**
  * main - print to the screen
- * Return: returns void
+ * Return: returns zero
  */
 
-void main(void)
+int main(void)
 {
 	int a = 1;
 	int b = 2;
@@ -27,4 +27,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
