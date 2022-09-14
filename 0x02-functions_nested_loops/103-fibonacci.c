@@ -20,5 +20,6 @@ int main(void)
 		c = a + b;
 	}
 	printf("%ld\n", d);
-	return (0);	
+	return (0);
+
 }
