@@ -7,19 +7,20 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c, d;
+	long int a = 1;
+	long int b = 2;
+	int c;
+	long int d;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (c = 2; c < 50; c++)
 	{
 		d = a + b;
 		if (c == 49)
-			printf("%d", d);
+			printf("%ld", d);
 		else
 		{
-			printf("%d, ", d);
+			printf("%ld, ", d);
 			a = b;
 
 			b = d;
