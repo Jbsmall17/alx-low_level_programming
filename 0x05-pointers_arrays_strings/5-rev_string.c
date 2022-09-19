@@ -6,26 +6,22 @@
  */
 void rev_string(char *s)
 {
-	int j = string_length(s);
-	int k;
+	char *t = s;
+	char n[1000];
+	short c = 0;
 
-	for (k = j - 1; k >= 0; k--)
+	while (*s != '\0')
 	{
-		_putchar(s[k]);
+		n[c] = *s;
+		s++;
+		c++;
 	}
-}
+	c = 0;
 
-/**
- * string_length - print the length of a string
- * @l: store a string
- * Return: returns a number
- */
-int string_length(char *l)
-{
-	int i;
-
-	for (i = 0; l[i] != '\0'; i++)
+	while (s > t)
 	{
+		s--;
+		*s = n[c];
+		c++;
 	}
-	return (i);
 }
