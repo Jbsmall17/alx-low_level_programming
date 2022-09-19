@@ -6,7 +6,7 @@
  */
 void puts_half(char *str)
 {
-	int a,b;
+	int a, b;
 
 	a = _strlen(str);
 	if (a % 2 == 0)
@@ -22,7 +22,7 @@ void puts_half(char *str)
 	_putchar('\n');
 }
 /**
- * int _strlen - returns the kength of a string
+ * _strlen - returns the kength of a string
  * @s: a pointer to s
  * Return: returns a number
  */
