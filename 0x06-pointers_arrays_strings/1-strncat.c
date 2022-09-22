@@ -10,25 +10,19 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int a, dest_length = string_length(dest);
+		int size1 = 0;
+		int size2 = 0;
 
-	for (a = 0; a < n && src[a] != '\0'; a++)
-		dest[dest_length + a] = src[a];
-	dest[dest_length + a] = src[a];
-	return (dest);
-}
+		while (*(dest + size1) != '\0')
+			size1++;
 
-/**
- * string_length - find the length of a string
- * @str: string parameter
- * Return: returns length of a string
- */
-
-int string_length(char *str)
-{
-	int a, count = 0;
-
-	for (a = 0; str[a] != '\0'; a++)
-		count++;
-	return (count);
+		while (size2 < n)
+		{
+			*(dest + size1) = *(src + size2);
+			if (*(src + size2) == '\0')
+				break;
+			size1++;
+			size2++;
+		}
+		return (dest);
 }
