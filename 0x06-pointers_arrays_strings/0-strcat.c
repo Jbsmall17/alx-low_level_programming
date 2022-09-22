@@ -8,29 +8,23 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int a, dest_length = string_length(dest);
+	int s1 = 0;
+	int s2 = 0;
 
-	for (a = 0; src[a] = '\0'; a++)
+	while (*(dest + s1) != '\0')
 	{
-		dest[dest_length + a] = src[a];
+		s1++;
 	}
-	dest[dest_length + a] = '\0';
+
+	while (s2 >= 0)
+	{
+		*(dest + s1) = *(src + s2);
+		if (*(src + s2) == '\0')
+		{
+			break;
+		}
+		s1++;
+		s2++;
+	}
 	return (dest);
-}
-
-/**
- * string_length - finds length of string
- * @str: string parameter
- * Return: returns a number
- */
-int string_length(char *str)
-{
-	int a, count = 0;
-
-	for (a = 0; str[a] != '\0'; a++)
-	{
-		count++;
-	}
-
-	return (count);
 }
