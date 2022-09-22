@@ -6,24 +6,25 @@
  * Return: returns a string
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
-	int i;
+	int n = 0, i;
+	int lower_case_letters[] = {97, 101, 111, 116, 108};
+	int upper_case_letters[] = {65, 69, 79, 84, 76};
+	int numbers[] = {52, 51, 48, 55, 49};
 
-	int i, j;
-
-	char src[] = "aeotlAEOTL";
-	char dest[] = "4307143071";
-
-	for (i = 0; *(str + i); i++)
+	while (*(s + n) != '\0')
 	{
-		for (j = 0; j < 10; j++)
+		for (i = 0; i < 5; i++)
 		{
-			if (src[j] == *(str + i))
+			if (*(s + n) == lower_case_letters[i] || 
+			    *(s + n) == upper_case_letters[i])
 			{
-				*(str + i) = dest[j];
+				*(s + n) = numbers[i];
+				break;
 			}
 		}
+		n++;
 	}
-	return (str);
+	return (s);
 }
